@@ -2,21 +2,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 
     <body>
 
-        <ui:composition template="./templates/Template.xhtml">
+        <ui:composition template="./../templates/Template.xhtml">
 
             <ui:define name="titulo">
-                Los Pinos
+                Administraci&ocirc;n
             </ui:define>
 
             <ui:define name="menu_principal">
-                <li class="active"><a href="#">Inicio</a></li>
-                <li class="dropdown"><a href="#"
-                                        class="dropdown-toggle" data-toggle="dropdown">Administraci&oacute;n
+                <li ><a href="#">Inicio</a></li>
+                <li class="dropdown active"><a href="#"
+                                               class="dropdown-toggle" data-toggle="dropdown">Administraci&oacute;n
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
@@ -36,12 +35,12 @@
                 <li><a href="#clientes">Clientes</a></li>
                 <li><a href="#socios">Socios</a></li>
             </ui:define>
+
             <ui:define name="contenedor_principal">
-                <h:form>
-                    <p:inputText value="#{newSessionBean.numero}"/>
-                    <p:commandButton value="perrita" actionListener="#{newSessionBean.prueba()}" />
-                </h:form>
+                <ui:include src="../bloks/gestionPersonas/AgregarPersona.xhtml"></ui:include>
             </ui:define>
+
         </ui:composition>
+
     </body>
 </html>
